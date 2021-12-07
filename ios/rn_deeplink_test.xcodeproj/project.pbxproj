@@ -114,7 +114,6 @@
 				54C0AB29603E1FFCE9263BA1 /* Pods-rn_deeplink_test-rn_deeplink_testTests.debug.xcconfig */,
 				89A9961CD821BA430AB8DA93 /* Pods-rn_deeplink_test-rn_deeplink_testTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
