@@ -9,6 +9,9 @@
 import React from 'react';
 import type {Node} from 'react';
 import {
+  Alert,
+  Button,
+  Linking,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -83,6 +86,63 @@ const App: () => Node = () => {
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
+          <Button title="mitfdm" onPress={async () => {
+            const appLink = 'mitfdm'
+            if(await Linking.canOpenURL(appLink)){
+              await Linking.openURL(appLink)
+            } else {
+              Alert.alert('error', 'error')
+            }
+          }}></Button>
+          <Button title="5 mitfdm://" onPress={async () => {
+            const appLink = 'mitfdm://'
+            if(await Linking.canOpenURL(appLink)){
+              await Linking.openURL(appLink)
+            } else {
+              Alert.alert('error', 'error')
+            }
+          }}></Button>
+          <Button title="mitfdm://app" onPress={async () => {
+            const appLink = 'mitfdm://app'
+            if(await Linking.canOpenURL(appLink)){
+              await Linking.openURL(appLink)
+            } else {
+              Alert.alert('error', 'error')
+            }
+          }}></Button>
+          <Button title="fb://" onPress={async () => {
+            const appLink = 'fb://'
+            if(await Linking.canOpenURL(appLink)){
+              await Linking.openURL(appLink)
+            } else {
+              Alert.alert('error', 'error')
+            }
+          }}></Button>
+          <Button title="fb://app" onPress={async () => {
+            const appLink = 'fb://app'
+            if(await Linking.canOpenURL(appLink)){
+              await Linking.openURL(appLink)
+            } else {
+              Alert.alert('error', 'error')
+            }
+          }}></Button>
+          <Button title="viber://" onPress={async () => {
+            const appLink = 'viber://'
+            await Linking.openURL(appLink)
+            if(await Linking.canOpenURL(appLink)){
+              await Linking.openURL(appLink)
+            } else {
+              Alert.alert('error', 'error')
+            }
+          }}></Button>
+          <Button title="slack://" onPress={async () => {
+            const appLink = 'slack://'
+            if(await Linking.canOpenURL(appLink)){
+              await Linking.openURL(appLink)
+            } else {
+              Alert.alert('error', 'error')
+            }
+          }}></Button>
           <LearnMoreLinks />
         </View>
       </ScrollView>
